@@ -1,0 +1,317 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 1400px;
+  height: 690px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  position: relative;
+}
+
+.container_column {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  height: 690px;
+  margin-top: 10px;
+}
+
+.container_column * {
+  margin: auto;
+}
+
+.device {
+  width: 100%;
+  height: 100%;
+  background-color: #F1E1D2;
+  transition: 3s;
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  color: #97B1A6;
+  position: relative;
+}
+.device .numerate_grid {
+  position: absolute;
+}
+.device .numerate_grid1 {
+  width: 60%;
+  height: 2%;
+  left: 22%;
+  top: 1%;
+  display: flex;
+  flex-direction: row;
+}
+.device .numerate_grid2 {
+  width: 1%;
+  height: 90%;
+  left: 20%;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.device .grid {
+  width: 60%;
+  height: 90%;
+  border: 1px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  cursor: pointer;
+}
+.device .grid .block {
+  width: 25%;
+  height: 30%;
+  transition: 0.5s;
+  border: 2px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  color: #97B1A6;
+  margin-bottom: 0;
+  z-index: 1100;
+}
+.device .grid .block .cell {
+  margin: auto;
+  width: 10%;
+  height: 9%;
+  transition: 0.5s;
+  border: 1px solid #97B1A6;
+}
+.device .grid .numerate_column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  flex-wrap: wrap;
+  top: 1%;
+  left: -2%;
+}
+.device .grid .numerate_column .numerate_block {
+  width: 25%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+.device .grid .numerate_column .numerate_block .number_cell {
+  width: 10%;
+  height: 13%;
+  margin: 0;
+  font-size: 70%;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+.device .grid .numerate_row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  flex-wrap: wrap;
+}
+.device .grid .numerate_row .numerate_block {
+  position: relative;
+  top: -16%;
+  left: 0;
+  border: 1px solid rgba(255, 0, 0, 0);
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+.device .grid .numerate_row .numerate_block .number_cell {
+  font-size: 70%;
+  margin: 0;
+  width: 15%;
+  border: 1px solid rgba(255, 0, 0, 0);
+  height: 9px;
+  text-align: center;
+}
+
+.warp {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.thread_box {
+  width: 1100px;
+  justify-content: center;
+  height: auto;
+  flex-wrap: wrap;
+  border: 3px solid #97B1A6;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #F1E1D2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+  transition: 3s;
+  color: #97B1A6;
+}
+.thread_box .threads {
+  display: flex;
+  flex-direction: column;
+}
+.thread_box .threads .thread {
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #97B1A6;
+  background-color: white;
+  font-size: 80%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.thread_box::before {
+  content: "Threads";
+}
+
+.math {
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  font-size: 150%;
+}
+.math .part_of_formula {
+  display: flex;
+  flex-direction: row;
+}
+.math .part_of_formula .simple_text {
+  color: #249D8C;
+}
+.math .part_of_formula .change_math {
+  width: 120px;
+  transition: 0.5s;
+  text-align: center;
+}
+.math #blockIdx_x, .math .blockDim_x {
+  color: #F4C84B;
+}
+.math #blockIdx_y, .math #blockId, .math #threadIdx_y {
+  color: #E77D67;
+}
+.math #gridDim_x, .math #blockDim_y, .math #threadIdx_x {
+  color: #97B1A6;
+}
+
+.host {
+  width: 8%;
+  height: 85%;
+  background-color: #E77D67;
+  transition: 3s;
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+.host .kernel {
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: 20%;
+  margin: auto;
+  background-color: white;
+  color: #97B1A6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.buttons .run_kernel {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background-color: #97B1A6;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.buttons .restart {
+  display: none;
+  width: 200px;
+  height: 50px;
+  background-color: #97B1A6;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.buttons .text {
+  margin: auto;
+  font-size: 200%;
+  text-align: center;
+  color: white;
+}
+
+.kernel::before, .host::before, .thread::before {
+  position: absolute;
+}
+
+.kernel::before {
+  content: "Kernel";
+}
+
+.host::before {
+  content: "Host";
+}
+
+.device::before {
+  position: relative;
+  left: 5%;
+  top: 2%;
+  content: "Device";
+}
+
+.background {
+  width: 1400px;
+  height: 600px;
+  margin: auto;
+  position: absolute;
+  z-index: -1;
+}
+.background .column_arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  left: 7%;
+  transition: 2s;
+  opacity: 0;
+}
+.background .column_arrow .arrow {
+  transform: scale(0.5, 0.5);
+  fill: url(#arrow_gradient3);
+}
+
+.active_block {
+  background-color: red;
+}

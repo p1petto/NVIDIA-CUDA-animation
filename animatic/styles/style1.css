@@ -1,0 +1,258 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 1400px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  position: relative;
+  align-items: center;
+}
+
+.container_column {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  height: 600px;
+  margin-top: 10px;
+}
+
+.container_column * {
+  margin: auto;
+}
+
+.box_task {
+  cursor: pointer;
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  width: 1100px;
+  justify-content: center;
+  height: auto;
+  flex-wrap: wrap;
+  border: 2px dashed #97B1A6;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #F1E1D2;
+}
+.box_task .cell {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  font-size: 80%;
+  align-items: center;
+  border: 2px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #97B1A6;
+}
+
+.device {
+  width: 100%;
+  height: 100%;
+  background-color: #F1E1D2;
+  transition: 3s;
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #97B1A6;
+}
+.device .grid {
+  width: 80%;
+  height: 60%;
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.device .grid .block {
+  width: 8%;
+  height: 30%;
+  transition: 0.5s;
+  border: 2px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  color: #97B1A6;
+}
+.device .grid .block .idx_change {
+  display: none;
+}
+
+.warp {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.thread_box {
+  width: 1100px;
+  justify-content: center;
+  height: auto;
+  flex-wrap: wrap;
+  border: 3px solid #97B1A6;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #F1E1D2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+  transition: 3s;
+  color: #97B1A6;
+}
+.thread_box .thread {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #97B1A6;
+  background-color: white;
+  font-size: 80%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.thread_box::before {
+  content: "Threads";
+}
+
+.math {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  font-size: 150%;
+}
+.math .simple_text {
+  color: #249D8C;
+}
+.math .change_math {
+  width: 100px;
+  transition: 0.5s;
+}
+.math #blockIdx {
+  color: #E77D67;
+}
+.math #blockDim {
+  color: #F4C84B;
+}
+.math #threadIdx {
+  color: #249D8C;
+}
+
+.host {
+  width: 8%;
+  height: 80%;
+  background-color: #E77D67;
+  transition: 3s;
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5%;
+  color: white;
+}
+.host .kernel {
+  border: 3px solid #97B1A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: 20%;
+  margin: auto;
+  background-color: white;
+  color: #97B1A6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.buttons .run_kernel {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background-color: #97B1A6;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.buttons .restart {
+  display: none;
+  width: 200px;
+  height: 50px;
+  background-color: #97B1A6;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.buttons .text {
+  margin: auto;
+  font-size: 200%;
+  text-align: center;
+  color: white;
+}
+
+.kernel::before, .host::before, .device::before, .grid::before, .block::before, .thread::before {
+  position: absolute;
+}
+
+.kernel::before {
+  content: "Kernel";
+}
+
+.host::before {
+  content: "Host";
+}
+
+.device::before {
+  content: "Device";
+}
+
+.grid::before {
+  content: "Grid";
+}
+
+.block::before {
+  content: "Block";
+}
+
+.background {
+  width: 1400px;
+  height: 600px;
+  margin: auto;
+  position: absolute;
+  z-index: -1;
+}
+.background .column_arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  left: 7%;
+  transition: 2s;
+  opacity: 0;
+}
+.background .column_arrow .arrow {
+  transform: scale(0.5, 0.5);
+  fill: url(#arrow_gradient3);
+}

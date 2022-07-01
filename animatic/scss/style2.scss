@@ -1,0 +1,317 @@
+* {
+    font-family: sans-serif;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .container {
+    width: 1400px;
+    height: 690px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    position: relative;
+  }
+  .container_column{
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    height: 690px;
+    margin-top: 10px;
+  }
+
+  .container_column * {
+    margin: auto;
+  }
+  .device {
+    width: 100%;
+    height: 100%;
+    background-color: #F1E1D2;
+    transition: 3s;
+    border: 3px solid #97B1A6;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: #97B1A6;
+    position: relative;
+    .numerate_grid{
+      position: absolute;
+    }
+    .numerate_grid1{
+      width: 60%;
+      height: 2%;
+      left: 22%;
+      top: 1%;
+      display: flex;
+      flex-direction: row;
+    }
+    .numerate_grid2{
+      width: 1%;
+      height: 90%;
+      left: 20%;
+      top: 5%;
+      display: flex;
+      flex-direction: column;
+    }
+    .grid {
+        width: 60%;
+        height: 90%;
+        border: 1px solid #97B1A6;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        cursor: pointer;
+        .block {
+            width: 25%;
+            height: 30%;
+            transition: 0.5s;
+            border: 2px solid #97B1A6;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: white;
+            color: #97B1A6;
+            margin-bottom: 0;
+            z-index: 1100;
+            .cell{
+              margin: auto;
+              width: 10%;
+              height: 9%;
+              transition: 0.5s;
+              border: 1px solid #97B1A6;
+            }
+            
+        }
+        .numerate_column{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          flex-wrap: wrap;
+          top: 1%;
+          left: -2%;
+          .numerate_block{
+            width: 25%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 0, 0, 0);
+            .number_cell{
+              
+              width: 10%;
+              height: 13%;
+              margin: 0;
+              font-size: 70%;
+              border: 1px solid rgba(255, 0, 0, 0);
+            }
+          }
+        }
+        .numerate_row{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          flex-wrap: wrap;
+          .numerate_block{
+            position: relative;
+            top: -16%;
+            left: 0;
+            border: 1px solid rgba(255, 0, 0, 0);
+            width: 25%;
+            display: flex;
+            flex-direction: row;
+            .number_cell{
+              font-size: 70%;
+              margin: 0;
+              width: 15%;
+              border: 1px solid rgba(255, 0, 0, 0);
+              height: 9px;
+              text-align: center;
+            }
+          }
+        }
+    }
+  }
+  .warp {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+  }
+  .thread_box{
+    width: 1100px;
+    justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+    border: 3px solid #97B1A6;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F1E1D2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    transition: 3s;
+    color: #97B1A6;
+    
+    .threads{
+      display: flex;
+      flex-direction: column;
+      
+      .thread {
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #97B1A6;
+        background-color: white;
+        font-size: 80%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transition: 0.5s;
+      }
+      
+      
+    }
+
+
+  }
+  .thread_box::before{
+    content: "Threads";
+  }
+  .math{
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    font-size: 150%;
+    .part_of_formula{
+      display: flex;
+      flex-direction: row;
+      .simple_text{
+        color: #249D8C;
+      }
+      .change_math{
+          width: 120px;
+          transition: .5s;
+          text-align: center;
+      }
+    }
+    #blockIdx_x, .blockDim_x{
+      color: #F4C84B;
+    }
+    #blockIdx_y, #blockId, #threadIdx_y{
+      color: #E77D67;
+    }
+    #gridDim_x, #blockDim_y, #threadIdx_x{
+      color: #97B1A6;
+    }
+    
+  }  
+  .host {
+    width: 8%;
+    height: 85%;
+    background-color: #E77D67;
+    transition: 3s;
+    border: 3px solid #97B1A6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    .kernel{
+        border: 3px solid #97B1A6;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 50%;
+        height: 20%;
+        margin: auto;
+        background-color: white;
+        color: #97B1A6;
+      }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    .run_kernel{
+        display: flex;
+        width: 200px;
+        height: 50px;
+        background-color: #97B1A6;
+        cursor: pointer;
+        margin-top: 20px;
+      }    
+    .restart {
+        display: none;
+        width: 200px;
+        height: 50px;
+        background-color: #97B1A6;
+        cursor: pointer;
+        margin-top: 20px;
+        
+    }
+    .text {
+        margin: auto;
+        font-size: 200%;
+        text-align: center;
+        color: white;
+      }
+  }
+  .kernel::before, .host::before, .thread::before {
+    position: absolute;
+  }
+  
+  .kernel::before {
+    content: "Kernel";
+  }
+  
+  .host::before {
+    content: "Host";
+  }
+  
+  .device::before {
+    position: relative;
+    left: 5%;
+    top: 2%;
+    content: "Device";
+  }
+  
+  
+
+  .background {
+    width: 1400px;
+    height: 600px;
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    .column_arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        left: 7%;
+        transition: 2s;
+        opacity: 0;
+        .arrow {
+            transform: scale(0.5, 0.5);
+            fill: url(#arrow_gradient3);
+          }
+      }
+  }
+  

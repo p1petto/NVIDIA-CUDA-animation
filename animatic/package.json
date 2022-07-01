@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "dependencies": {
+        "@types/jquery": "^3.5.14",
+        "autoprefixer": "^6.5.4"
+    },
+    "browserslist": [
+        "last 20 version",
+        "> 0.2%"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jquery"
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+.container.started .cell:hover {
+  background-color: #249D8C;
+  color: white;
+}
+.container.started .host {
+  background-color: #F1E1D2;
+  color: #97B1A6;
+}
+.container.started .device {
+  background-color: #E77D67;
+  color: white;
+  border-color: #F1E1D2;
+}
+.container.started .grid {
+  border-color: #F1E1D2;
+}
+.container.started .block {
+  border-color: #F1E1D2;
+}
+.container.started .block.block.active {
+  color: #249D8C;
+}
+.container.started #buttonS {
+  display: none;
+}
+.container.started #buttonR {
+  display: flex;
+}
+.container.started .thread_box {
+  opacity: 100%;
+}
+.container.started .column_arrow {
+  opacity: 100%;
+  left: 9%;
+}
+.container.started .thread.active {
+  background-color: #249D8C;
+  color: white;
+}
+.container.started .block.active {
+  background-color: #F4C84B;
+}
+.container.started .block.active:nth-child(3) .index_of_block {
+  display: none;
+}
+.container.started .block.active:nth-child(3) .idx_change {
+  display: flex;
+}
+.container.started .block.active:nth-child(4) .index_of_block {
+  display: none;
+}
+.container.started .block.active:nth-child(4) .idx_change {
+  display: flex;
+}

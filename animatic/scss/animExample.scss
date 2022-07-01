@@ -1,0 +1,63 @@
+.container{
+    &.started{
+        .cell:hover{
+            background-color: #249D8C;
+            color: white;
+        }
+        .host{
+            background-color: #F1E1D2;
+            color: #97B1A6;
+        }
+        .device{
+            background-color: #E77D67;
+            color: white;
+            border-color: #F1E1D2;
+        }
+        .grid{
+            border-color: #F1E1D2;
+        }
+        .block{
+            border-color: #F1E1D2;
+        }
+        .block.block.active{
+            color: #249D8C;
+        }
+        #buttonS{
+            display: none;
+        }
+        #buttonR{
+            display: flex;
+        }
+        .thread_box{
+            opacity: 100%;
+        }
+        .column_arrow{
+            opacity: 100%;
+            left: 9%;
+        }
+        .thread.active{
+            background-color:#249D8C;
+            color: white;
+        } 
+        .block.active{
+            background-color: #F4C84B;
+        }
+        .block.active:nth-child(3){
+            .index_of_block{
+                display: none;
+            }
+            .idx_change{
+                display: flex;
+            }
+        }
+        .block.active:nth-child(4){
+            .index_of_block{
+                display: none;
+            }
+            .idx_change{
+                display: flex;
+            }
+        }
+        
+    }
+}
